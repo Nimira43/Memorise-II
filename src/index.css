@@ -40,9 +40,11 @@ body {
 
 .logo {
   font-family: 'Lovers Quarrel', cursive;
-  font-size: var(--size-xxl);
+  font-size: 3rem;
+  letter-spacing: var(--size-2);
 }
 
 .heading {
   font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: var(--size-2);
 }
