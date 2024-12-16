@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
       <h1 className='logo'>Apothématos</h1>
-      <h4 className='heading'>Heading</h4>
+      <h1 className='heading'>Heading</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, exercitationem?</p>
     </div>
   )
