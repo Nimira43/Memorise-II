@@ -3,7 +3,9 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      <h1>Apothématos</h1>
+      <h1 className='logo'>Apothématos</h1>
+      <h4 className='headin'>Heading</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, exercitationem?</p>
     </div>
   )
 }
