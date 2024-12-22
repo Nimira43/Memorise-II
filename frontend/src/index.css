@@ -38,17 +38,25 @@
 }
 
 body {
-  background-color: var(--light);
+  background-color: var(--primary-light);
   color: var(--grey-dark);
+}
+
+.intro {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: var(--size-xl) var(--size-xxxl);
 }
 
 .logo {
   font-family: 'Lovers Quarrel', cursive;
   font-size: 3rem;
   letter-spacing: var(--size-2);
+  color: var(--primary-light)
 }
 
 .heading {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: var(--size-2);
 }
+
