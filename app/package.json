@@ -18,5 +18,9 @@
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "lorem-ipsum": "^2.0.8"
   }
 }
