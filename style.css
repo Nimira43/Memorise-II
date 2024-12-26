@@ -10,7 +10,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--dark);
-  color: var(--dark);
+  color: var(--primary);
   text-align: center;
 }
 
@@ -29,4 +29,5 @@ p {
   grid-template-columns: repeat(6, var(--card-width));
   grid-template-rows: repeat(2, var(--card-height));
   justify-content: center;
+  grid-gap: 1rem;
 }
