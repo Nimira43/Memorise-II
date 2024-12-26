@@ -16,3 +16,10 @@ p {
   font-size: 1.9rem;
   font-weight: 200;
 }
+
+.card-table {
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: center;
+}
