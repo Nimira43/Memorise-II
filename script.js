@@ -7,10 +7,13 @@ fetch('./data/card-info.json')
     // const cardsWithMap = data.map(card => [card, card]).flat()
     // console.log(cardsWithMap)
     
-    const cardsWithFlatMap = data.flatMap(card => {
-      return [card, card]
-    })
-    console.log(cardsWithFlatMap)
+    // const cardsWithFlatMap = data.flatMap(card => {
+    //   return [card, card]
+    // })
+    // console.log(cardsWithFlatMap)
+
+    cards = [...data, ...data]
+    console.log(cards)
 
   })
   .catch((error) => {
