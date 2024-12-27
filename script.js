@@ -1,4 +1,5 @@
 let cards = []
+let cardTable = document.querySelector('.card-table')
 
 fetch('./data/card-info.json')
   .then(response => response.json())
@@ -19,9 +20,7 @@ fetch('./data/card-info.json')
         <div class='back'>
           <img class='back-image' src='${card.image}.png'>
         </div>
-        <div class='front'>
-        
-        </div>
       `
+      cardTable.appendChild(cardElement)
     }
   }
