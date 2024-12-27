@@ -3,19 +3,25 @@ let cards = []
 fetch('./data/card-info.json')
   .then(response => response.json())
   .then((data) => {
-
-    // const cardsWithMap = data.map(card => [card, card]).flat()
-    // console.log(cardsWithMap)
-    
-    // const cardsWithFlatMap = data.flatMap(card => {
-    //   return [card, card]
-    // })
-    // console.log(cardsWithFlatMap)
-
     cards = [...data, ...data]
-    console.log(cards)
-
+    dealCards(cards)
   })
   .catch((error) => {
     console.log('Error fetching card data: ', error)
   })
+
+  function dealCards(cards) {
+    for (const card of cards) {
+      let cardElement = document.createElement('div')
+      cardElement.classList.add('card')
+      cardElement.setAttribute('data-name', card.name)
+      cardElement.innerHTML = `
+        <div class='back'>
+          <img class='back-image' src='${card.image}.png'>
+        </div>
+        <div class='front'>
+        
+        </div>
+      `
+    }
+  }
