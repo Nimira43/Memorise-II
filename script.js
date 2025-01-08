@@ -11,16 +11,20 @@ fetch('./data/card-info.json')
     console.log('Error fetching card data: ', error)
   })
 
-  function dealCards(cards) {
+  function dealCards(cards) { 
+    let fragment = document.createDocumentFragment()
     for (const card of cards) {
-      let cardElement = document.createElement('div')
-      cardElement.classList.add('card')
-      cardElement.setAttribute('data-name', card.name)
-      cardElement.innerHTML = `
-        <div class='back'>
-          <img class='back-image' src='${card.image}.png'>
-        </div>
-      `
-      cardTable.appendChild(cardElement)
+      // let cardElement = document.createElement('div')
+      // cardElement.classList.add('card')
+      // cardElement.setAttribute('data-name', card.name)
+      // cardElement.innerHTML = `
+      //   <div class='back'>
+      //     <img class='back-image' src='${card.image}.png'>
+      //   </div>
+      // `
+      // cardTable.appendChild(cardElement)
     }
+  
   }
+
+  
