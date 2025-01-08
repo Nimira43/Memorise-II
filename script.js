@@ -28,7 +28,7 @@ fetch('./data/card-info.json')
       img.src = `${card.image}.png`
       backCardDiv.appendChild(img)
 
-      cardElement.append(frontCardDiv, backCardDiv)
+      cardElement.append(backCardDiv, frontCardDiv)
       fragment.appendChild(cardElement)
     }
     cardTable.appendChild(fragment)
