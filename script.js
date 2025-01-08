@@ -14,17 +14,24 @@ fetch('./data/card-info.json')
   function dealCards(cards) { 
     let fragment = document.createDocumentFragment()
     for (const card of cards) {
-      // let cardElement = document.createElement('div')
-      // cardElement.classList.add('card')
-      // cardElement.setAttribute('data-name', card.name)
-      // cardElement.innerHTML = `
-      //   <div class='back'>
-      //     <img class='back-image' src='${card.image}.png'>
-      //   </div>
-      // `
-      // cardTable.appendChild(cardElement)
+      let cardElement = document.createElement('div')
+      cardElement.classList.add('card')
+      cardElement.setAttribute('data-name', card.name)
+
+      let frontCardDiv = document.createElement('div')
+      frontCardDiv.classList.add('front')
+
+      let backCardDiv = document.createElement('div')
+      backCardDiv.classList.add('back')
+      let img = document.createElement('img')
+      img.classList.add('back-image')
+      img.src = `${card.image}.png`
+      backCardDiv.appendChild(img)
+
+      cardElement.append(frontCardDiv, backCardDiv)
+      fragment.appendChild(cardElement)
     }
-  
+    cardTable.appendChild(fragment)
   }
 
   
