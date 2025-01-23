@@ -2,6 +2,7 @@
 
 :root {
   --primary: #ff4500;
+  --secondary: #a2dbf2;
   --dark: #111;
   --card-width: calc(1000 / 6 * 1px);
   --card-height: calc(var(--card-width) * 1.5);
@@ -35,8 +36,9 @@ p {
 
 .card {
   position: relative;
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s;
   cursor: pointer;
+  transform-style: preserve-3d;
 }
 
 .back-image {
@@ -46,7 +48,7 @@ p {
 
 .card .back {
   position: absolute;
-  background-color: #f8f8e8;
+  background-color: var(--secondary);
   width: 100%;
   height: 100%;
   border-radius: 5%;
@@ -62,6 +64,7 @@ p {
   background-size: cover;
   height: 100%;
   width: 100%;
+  backface-visibility: hidden;
 }
 
 .card.flipped {
