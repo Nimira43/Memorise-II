@@ -36,7 +36,6 @@ p {
 .card {
   position: relative;
   transition: transform 0.5s ease-in-out;
-
   cursor: pointer;
 }
 
@@ -67,4 +66,11 @@ p {
 
 .card.flipped {
   transform: rotateY(180deg);
+
+  /* 
+  The same rotation can be achieved using the following code:
+  
+  transform: rotateY(0.5turn);
+  */ 
+
 }
