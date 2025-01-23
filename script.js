@@ -40,7 +40,7 @@ function dealCards(cards) {
 }
 
 function flipCard() {
-  console.log('text')
+  this.classList.add('flipped')
 }
 
 
