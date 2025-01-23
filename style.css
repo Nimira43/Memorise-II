@@ -35,7 +35,9 @@ p {
 
 .card {
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+
+  cursor: pointer;
 }
 
 .back-image {
@@ -57,7 +59,12 @@ p {
 .card .front {
   position: absolute;
   background: url('./images/bg.jpg') center no-repeat;
+  border-radius: 5%;
   background-size: cover;
   height: 100%;
   width: 100%;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
 }
