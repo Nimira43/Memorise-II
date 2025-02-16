@@ -5,11 +5,21 @@ fetch('./data/card-info.json')
   .then(response => response.json())
   .then((data) => {
     cards = [...data, ...data]
-    dealCards(cards)
+
+    let shuffledCards = shuffle() 
+
+    dealCards(shuffledCards)
   })
   .catch((error) => {
     console.log('Error fetching card data: ', error)
   })
+
+function shuffle() {
+  let shuffledCardArray = [...cards]
+  let totalCards = shuffledCardsArray.length
+  let currentIndex = totalCards - 1
+}
+
 
 function dealCards(cards) { 
   let fragment = document.createDocumentFragment()
