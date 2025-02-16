@@ -15,9 +15,16 @@ fetch('./data/card-info.json')
   })
 
 function shuffle() {
-  let shuffledCardArray = [...cards]
+  let shuffledCardsArray = [...cards]
   let totalCards = shuffledCardsArray.length
   let currentIndex = totalCards - 1
+
+  for (currentIndex; currentIndex > 0; currentIndex--) {
+    let randomCardIndex = Math.floor(Math.random() * (currentIndex + 1))
+    let randomCard = shuffledCardsArray[randomCardIndex]
+    shuffledCardsArray[randomCardIndex] = shuffledCardsArray[currentIndex]
+    shuffledCardsArray[currentIndex] = randomCard
+  }
 }
 
 
