@@ -25,9 +25,8 @@ function shuffle() {
     shuffledCardsArray[randomCardIndex] = shuffledCardsArray[currentIndex]
     shuffledCardsArray[currentIndex] = randomCard
   }
-  return shuffledCardArray
+  return shuffledCardsArray
 }
-
 
 function dealCards(cards) { 
   let fragment = document.createDocumentFragment()
