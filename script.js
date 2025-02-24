@@ -60,6 +60,10 @@ function dealCards(cards) {
 
 function flipCard() {
   this.classList.add('flipped')
+  if (!firstCard) {
+    firstCard = this
+    return
+  }
 }
 
 
