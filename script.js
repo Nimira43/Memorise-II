@@ -25,6 +25,7 @@ function shuffle() {
     shuffledCardsArray[randomCardIndex] = shuffledCardsArray[currentIndex]
     shuffledCardsArray[currentIndex] = randomCard
   }
+  return shuffledCardArray
 }
 
 
