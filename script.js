@@ -1,5 +1,7 @@
 let cards = []
 let cardTable = document.querySelector('.card-table')
+let firstCard = null
+let secondCard = null
 
 fetch('./data/card-info.json')
   .then(response => response.json())
