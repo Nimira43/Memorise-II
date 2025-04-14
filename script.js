@@ -69,6 +69,7 @@ function flipCard() {
 
   secondCard = this
   console.log('Second Card', secondCard)
+  noFlipping = true
 }
 
 
