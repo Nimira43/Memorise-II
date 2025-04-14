@@ -62,8 +62,12 @@ function flipCard() {
   this.classList.add('flipped')
   if (!firstCard) {
     firstCard = this
+    console.log('First card:', firstCard)
     return
   }
+
+  secondCard = this
+  console.log('Second Card', secondCard)
 }
 
 
