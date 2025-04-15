@@ -85,7 +85,14 @@ function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove('flipped')
     secondCard.classList.remove('flipped')
+    resetFlags()
   }, 1000) 
+}
+
+function resetFlags() {
+  firstCard = null
+  secondCard = null
+  noFlipping = false
 }
 
 function matchCards() {
