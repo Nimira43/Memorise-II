@@ -78,7 +78,17 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = (firstCard.dataset.name === secondCard.dataset.name)
   console.log(isMatch)
+  isMatch ? matchCards() : unflipCards()
 }
+
+function unflipCards() {
+
+}
+
+function matchCards() {
+  
+}
+
 
 
   
