@@ -60,7 +60,7 @@ function dealCards(cards) {
 }
 
 function flipCard() {
-  if (noFlipping) { return }
+  if (noFlipping) return 
   this.classList.add('flipped')
   if (!firstCard) {
     firstCard = this
@@ -71,6 +71,13 @@ function flipCard() {
   secondCard = this
   console.log('Second Card', secondCard)
   noFlipping = true
+
+  checkForMatch()
+}
+
+function checkForMatch() {
+  let isMatch = (firstCard.dataset.name === secondCard.dataset.name)
+  console.log(isMatch)
 }
 
 
