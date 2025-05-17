@@ -71,7 +71,6 @@ function flipCard() {
   secondCard = this
   console.log('Second Card', secondCard)
   noFlipping = true
-
   checkForMatch()
 }
 
@@ -89,15 +88,18 @@ function unflipCards() {
   }, 1000) 
 }
 
+function matchCards() {
+  firstCard.removeEventListener('click', flipCard)
+  secondCard.removeEventListener('click', flipCard)
+}
+
 function resetFlags() {
   firstCard = null
   secondCard = null
   noFlipping = false
 }
 
-function matchCards() {
 
-}
 
 
 
