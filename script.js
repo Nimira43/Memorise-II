@@ -93,6 +93,7 @@ function matchCards() {
   secondCard.removeEventListener('click', flipCard)
   setCardBackground(firstCard, '#ff4500')
   setCardBackground(secondCard, '#ff4500')
+  resetFlags()
 }
 
 function setCardBackground(card, colour) {
