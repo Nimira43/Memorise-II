@@ -64,6 +64,7 @@ function flipCard() {
   this.classList.add('flipped')
   if (this === firstCard) {
     alert('You cannot click on the same card you just flipped over!!!')
+    return
   }
 
   if (!firstCard) {
