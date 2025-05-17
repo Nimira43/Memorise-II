@@ -91,6 +91,8 @@ function unflipCards() {
 function matchCards() {
   firstCard.removeEventListener('click', flipCard)
   secondCard.removeEventListener('click', flipCard)
+  firstCard.children[0].style.background = '#ff4500'
+  secondCard.children[0].style.background = '#ff4500'
 }
 
 function resetFlags() {
