@@ -62,6 +62,10 @@ function dealCards(cards) {
 function flipCard() {
   if (noFlipping) return 
   this.classList.add('flipped')
+  if (this === firstCard) {
+    alert('You cannot click on the same card you just flipped over!!!')
+  }
+
   if (!firstCard) {
     firstCard = this
     console.log('First card:', firstCard)
