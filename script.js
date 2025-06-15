@@ -3,7 +3,9 @@ let cardTable = document.querySelector('.card-table')
 let firstCard = null
 let secondCard = null
 let noFlipping = false
-let triesRemaining = 5
+let livesRemaining = 5
+
+document.querySelector('.lives-remaining').textContent = livesRemaining
 
 fetch('./data/card-info.json')
   .then(response => response.json())

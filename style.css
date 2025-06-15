@@ -69,11 +69,8 @@ p {
 
 .card.flipped {
   transform: rotateY(180deg);
+}
 
-  /* 
-  The same rotation can be achieved using the following code:
-  
-  transform: rotateY(0.5turn);
-  */ 
-
+.lives-remaining {
+  color: var(--primary);
 }
