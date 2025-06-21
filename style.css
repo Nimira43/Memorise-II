@@ -86,3 +86,9 @@ p {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
+.image-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
