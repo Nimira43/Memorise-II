@@ -4,8 +4,8 @@ let firstCard = null
 let secondCard = null
 let noFlipping = false
 let livesRemaining = 5
-
-document.querySelector('.lives-remaining').textContent = livesRemaining
+let winCounter = null
+let counter = document.querySelector('.lives-remaining').textContent = livesRemaining
 
 fetch('./data/card-info.json')
   .then(response => response.json())
