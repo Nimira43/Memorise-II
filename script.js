@@ -10,10 +10,9 @@ let counter = document.querySelector('.lives-remaining').textContent = livesRema
 fetch('./data/card-info.json')
   .then(response => response.json())
   .then((data) => {
+    winCounter = data.length
     cards = [...data, ...data]
-
     let shuffledCards = shuffle() 
-
     dealCards(shuffledCards)
   })
   .catch((error) => {
