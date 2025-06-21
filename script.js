@@ -71,12 +71,10 @@ function flipCard() {
 
   if (!firstCard) {
     firstCard = this
-    console.log('First card:', firstCard)
     return
   }
 
   secondCard = this
-  console.log('Second Card', secondCard)
   noFlipping = true
   checkForMatch()
 }
@@ -89,6 +87,15 @@ function checkForMatch() {
 
 function unflipCards() {
   setTimeout(() => {
+    --livesRemaining
+    counter.textContent = livesRemaining
+
+    if (livesRemaining === 0) {
+      alert('You are Dead.')
+      showImageOverlay()
+      return
+    }
+    
     firstCard.classList.remove('flipped')
     secondCard.classList.remove('flipped')
     resetFlags()
