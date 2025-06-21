@@ -133,7 +133,16 @@ function resetFlags() {
 }
 
 function showImageOverlay() {
-  
+  let wrapper = document.createElement('div')
+  wrapper.className.add('image-overlay')
+
+  let image = document.createElement('img')
+  image.src = './images/game-over.jpg'
+  wrapper.appendChild(image)
+  document.body.appendChild(wrapper)
+  requestAnimationFrame(() => {
+    wrapper.style.opacity = 1
+  })
 }
 
 
