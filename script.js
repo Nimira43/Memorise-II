@@ -132,7 +132,11 @@ function resetFlags() {
   noFlipping = false
 }
 
-function showImageOverlay() {}
+function showImageOverlay() {
+  
+}
+
+
 function createStar() {}
 
 
