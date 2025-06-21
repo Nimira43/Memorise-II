@@ -95,7 +95,7 @@ function unflipCards() {
       showImageOverlay()
       return
     }
-    
+
     firstCard.classList.remove('flipped')
     secondCard.classList.remove('flipped')
     resetFlags()
@@ -103,6 +103,17 @@ function unflipCards() {
 }
 
 function matchCards() {
+  --winCounter
+
+  if (winCounter === 0) {
+    setTimeout(() => {
+      alert('You are Victorious. Please restart the browser.')
+      let starInterval = setInterval(createStar, 300)
+      setTimeout(() => {
+        clearInterval(starInterval)
+      }, 5000)
+    }, 1000)
+  }
   firstCard.removeEventListener('click', flipCard)
   secondCard.removeEventListener('click', flipCard)
   setCardBackground(firstCard, '#ff4500')
