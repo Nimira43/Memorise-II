@@ -114,6 +114,7 @@ function matchCards() {
       }, 5000)
     }, 1000)
   }
+
   firstCard.removeEventListener('click', flipCard)
   secondCard.removeEventListener('click', flipCard)
   setCardBackground(firstCard, '#ff4500')
@@ -130,6 +131,9 @@ function resetFlags() {
   secondCard = null
   noFlipping = false
 }
+
+function showImageOverlay() {}
+function createStar() {}
 
 
 
