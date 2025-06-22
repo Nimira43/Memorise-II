@@ -3,6 +3,7 @@
 :root {
   --primary: #ff4500;
   --secondary: #a2dbf2;
+  --gold: #ffd700;
   --dark: #111;
   --card-width: calc(1000 / 6 * 1px);
   --card-height: calc(var(--card-width) * 1.5);
@@ -105,7 +106,7 @@ p {
   top: -10px;
   width: 10px;
   height: 10px;
-  background-color: #ff4500;
+  background-color: var(--gold);
   border-radius: 50%;
   opacity: 1;
   animation: fall linear;

@@ -5,7 +5,8 @@ let secondCard = null
 let noFlipping = false
 let livesRemaining = 5
 let winCounter = null
-let counter = document.querySelector('.lives-remaining').textContent = livesRemaining
+let counter = document.querySelector('.lives-remaining')
+counter.textContent = livesRemaining
 
 fetch('./data/card-info.json')
   .then(response => response.json())
@@ -108,6 +109,9 @@ function matchCards() {
   if (winCounter === 0) {
     setTimeout(() => {
       alert('You are Victorious. Please restart the browser.')
+      let starWrapper = document.createElement('div')
+      starWrapper.classList.add('star-wrapper')
+      document.body.appendChild(starWrapper)
       let starInterval = setInterval(createStar, 300)
       setTimeout(() => {
         clearInterval(starInterval)
@@ -134,7 +138,7 @@ function resetFlags() {
 
 function showImageOverlay() {
   let wrapper = document.createElement('div')
-  wrapper.className.add('image-overlay')
+  wrapper.classList.add('image-overlay')
 
   let image = document.createElement('img')
   image.src = './images/game-over.jpg'
