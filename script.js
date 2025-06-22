@@ -145,8 +145,20 @@ function showImageOverlay() {
   })
 }
 
+function createStar() {
+  let star = document.createElement('div')
+  star.classList.add('star')
+  let randomX = Math.random() * window.innerWidth
+  star.style.left = `${randomX}px`
+  let duration = Math.random() * 2 + 3
+  star.style.animationDuration = `${duration}s`
 
-function createStar() {}
+  document.getElementsByClassName('star-wrapper')[0].appendChild(star)
+
+  star.addEventListener('animationend', () => {
+    star.remove()
+  })
+}
 
 
 
